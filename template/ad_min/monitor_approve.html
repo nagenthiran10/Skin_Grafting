@@ -1,0 +1,278 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+  <head>
+
+  	<title>monitor_approve</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+
+
+	 <base href="/static/ad_min/admin_home/">
+    <title>Smelter Industrial Category Bootstrap responsive WebTemplate | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Smelter a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/simpleLightbox.css" rel='stylesheet' type='text/css' />
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Roboto', serif;
+}</style>
+
+	</head>
+	<body>
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+  <header>
+        <div class="header_top" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="logo text-left">
+                    <h1>
+                        <a class="navbar-brand" href="index.html">
+                            <i class="fas fa-podcast"></i>ADMIN</a>
+                    </h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+
+                            </span>
+
+                        </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-lg-auto text-right">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/adminhome/">HOME
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      APPROVAL
+                                       <i class="fas fa-angle-down"></i>
+                                    </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/exfoapprove/">EXFOLIATION</a>
+                                <a class="dropdown-item" href="/bioapprove/" title="">BIOADHESION</a>
+                                <a class="dropdown-item" href="/dermatoapprove/">DERMATOPLASTY</a>
+                                <a class="dropdown-item active" href="/monitorapprove/" title="">MONITORING</a>
+                                <a class="dropdown-item" href="/evalapprove/">EVALUATION</a>
+
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link tooltip-blog" href="/requirements/">REQUIREMENTS </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      MANAGE REPORTS
+                                       <i class="fas fa-angle-down"></i>
+                                    </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/exfomanage/">EXFOLIATION</a>
+                                <a class="dropdown-item" href="/biomanage/" title="">BIOADHESION</a>
+                                <a class="dropdown-item" href="/dermatomanage/">DERMATOPLASTY</a>
+                                <a class="dropdown-item" href="/monitormanage/" title="">MONITORING</a>
+                                <a class="dropdown-item" href="/evalmanage/">EVALUATION</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/managestatus/">MANAGE STATUS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout/">LOGOUT</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </div>
+    </header>
+    <!--//header-->
+    <!--/banner-->
+
+    <div class="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+						<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="text-center mb-4" style="margin-top:70px;color:white;"><strong>MONITORING</strong></h4>
+					<br>
+					<div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary" style="text-align:center;">
+					      <tr>
+					       <tr >
+										<th>RH.ID</th>
+										<th>NAME</th>
+										<th>EMAIL</th>
+										<th>PHONE</th>
+										<th colspan="2">ACTION</th>
+									</tr>
+								</thead>
+								<tbody>
+									{% for main in data %}
+									<tr>
+										<td >{{ main.rh_id }}</td>
+										<td >{{ main.name }}</td>
+										<td >{{ main.email }}</td>
+										<td >{{ main.phone }}</td>
+
+
+                                                    {% if main.approve is False and main.reject is False %}
+                                                        <td>
+                                                            <a href="/approve/{{main.id}}/">
+                                                                <button class="action-button">Approve</button>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="/reject/{{main.id}}/">
+                                                                <button class="action-button reject-button">Reject</button>
+                                                            </a>
+                                                        </td>
+                                                    {% endif %}
+
+                                                    {% if main.approve is True %}
+                                                        <td>
+                                                            <p class="status-text approved"><strong>APPROVED</strong></p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="status-text no-action"><strong>NO ACTION</strong></p>
+                                                        </td>
+                                                    {% endif %}
+
+                                                    {% if main.reject is True %}
+                                                        <td>
+                                                            <p class="status-text no-action"><strong>NO ACTION</strong></p>
+                                                        </td>
+                                                        <td>
+                                                            <p class="status-text rejected"><strong>REJECTED</strong></p>
+                                                        </td>
+                                                    {% endif %}
+									</tr>
+									{% endfor %}
+
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!--//banner-->
+
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ <style>
+.action-button {
+    background-color: #4CAF50; /* Green background for the button */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.action-button:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
+}
+
+.reject-button {
+    background-color: #f44336; /* Red background for Reject button */
+}
+
+.reject-button:hover {
+    background-color: #d32f2f; /* Darker shade of red on hover */
+}
+
+.status-text {
+    font-weight: bold;
+    color: #333;
+}
+
+.status-text {
+    font-weight: bold;
+}
+
+.status-text.approved,
+.status-text.rejected {
+    color: green; /* Green for Approved and Rejected */
+}
+
+.status-text.no-action {
+    color: red; /* Red for No Action */
+}
+
+
+</style>
+
+
+	</body>
+</html>
+

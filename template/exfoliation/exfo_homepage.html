@@ -1,0 +1,193 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <base href="/static/exfoliation/exfo_homepage/">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>exfo_homepage </title>
+    <!-- google fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+
+<body>
+
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+               <h1><a  style="color:white;font-size:40px;">
+                        EXFOLIATION
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/exfo_home/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="/exfo_requirements/">REQUIREMENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="/exfo_scan/">EXFO SCAN</a>
+                        </li>
+
+                        <li class="nav-item me-lg-4">
+                            <a class="nav-link scroll" href="/exfo_file/">EXFO FILE</a>
+                        </li>
+                        <li class="nav-item me-lg-4">
+                            <a class="nav-link scroll" href="/exfo_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/Banner-Start-->
+    <!--/main-banner-->
+    <div class="w3l-main-slider position-relative" id="home">
+        <div class="w3l-bannerhny-content">
+            <div class="container">
+                <div class="w3l-bannerhny-info">
+                    <h3 class="mb-md-5 mb-4">
+                        Rebuilding Skin, Restoring Lives</h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//main-banner-->
+    <!--/Client-Section-->
+    <section id="about" class="clients">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 pe-lg-5">
+                    <div class="title-content text-left">
+                        <h3 class="title-w3l">WHAT WE PROPOSE HERE ...!!!!</h3>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4 ps-lg-5 mx-lg-0">
+                    <p class="pr-lg-5" style="text-align: justify;">
+                        we'll calculate the circumference of the skin to determine
+                        the required area for grafting. We'll also select the appropriate material
+                        used to peel the skin, ensuring it’s suitable for the procedure. The specific
+                        place where the skin is peeled will be carefully chosen based on medical requirements.
+                        Additionally, we'll determine the number and placement of holes to be made in the skin
+                        to facilitate optimal healing and integration with the graft site.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+    <!--//client-Section-->
+
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+        <!-- //move top -->
+    </footer><!-- End Footer -->
+
+
+    <!-- Template JavaScript -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/theme-change.js"></script>
+   
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

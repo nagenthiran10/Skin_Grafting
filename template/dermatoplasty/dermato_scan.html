@@ -1,0 +1,268 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+  	<title>dermato_scan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+
+
+
+	  	<base href="/static/dermatoplasty/dermato_homepage/">
+<title>dermato-homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Spa Care Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	Smart phone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/prettySticky.css" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+
+
+
+	</head>
+	<body>
+	<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+
+
+
+
+		<!-- banner -->
+	<div id="home" class="w3banner">
+		<div class="banner-info">
+			<!-- navigation -->
+			<div class="top-nav">
+				<nav>
+					<div class="container">
+						<div class="navbar-header logo">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<h1><a href="index.html">DERMATOPLASTY</a></h1>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-right">
+								<li><a href="/dermato_home/" class="link-kumya  scroll"><span data-letters="HOME">HOME</span></a></li>
+								<li><a href="/bioreports/" class="link-kumya "><span data-letters="BIO REPORTS">BIO REPORTS</span></a></li>
+								<li><a href="/dermatoscan/" class="link-kumya active"><span data-letters="DERMATO SCAN">DERMATO SCAN</span></a></li>
+								<li><a href="/dermatofile/" class=" link-kumya" data-toggle="dropdown"
+									   role="button" aria-haspopup="true" aria-expanded="false">
+									<span data-letters="DERMATO FILE">DERMATO FILE</span><span ></span></a>
+								</li>
+								<li><a href="/dermato_logout/" class="link-kumya"><span data-letters="LOGOUT">LOGOUT</span></a></li>
+							</ul>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- //navigation -->
+			<div class="banner-text">
+				<!-- banner Slider starts Here -->
+				<script src="js/responsiveslides.min.js"></script>
+				<script>
+					// You can also use "$(window).load(function() {"
+					$(function () {
+					  // Slideshow 3
+					  $("#slider3").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: false,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						  $('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+						  $('.events').append("<li>after event fired.</li>");
+						}
+					  });
+
+					});
+				</script>
+				<!-- //End-slider-script -->
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div>
+								<section class="ftco-section">
+										<div class="container">
+											<div class="row justify-content-center">
+
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<h4 class="text-center mb-4" style="margin-top:100px;font-family:Abel-regular;">DERMATOPLASTY SCAN</h4>
+													<div class="table-wrap">
+														<table class="table" >
+														<thead class="thead-primary" style="font-size:18px;background-color:#51b4d4;">
+														 <tr>
+																	<th style="color:white; text-align:center;">PROJECT_ID</th>
+																	<th style="color:white; text-align:center;">MUSSEL NEEDED(g)</th>
+																	<th style="color:white; text-align:center;">MUSSEL GLUE(mg)</th>
+																	<th style="color:white; text-align:center;">ALLANTOIN(mg)</th>
+																	<th style="color:white; text-align:center;">EGF(µg)</th>
+																	<th colspan="3" style="color:white; text-align:center;">ACTION</th>
+																</tr>
+															</thead>
+															<tbody>
+																{% for item in data %}
+																<tr>
+																	<td style="color:black;font-size:14px;">{{ item.project_id }}</td>
+																	<td style="color:black;font-size:14px;">{{ item.mussel_glue_needed }}</td>
+																	<td style="color:black;font-size:14px;">{{ item.mussel_needed }}</td>
+																	<td style="color:black;font-size:14px;">{{ item.allantoin_needed }}</td>
+																	<td style="color:black;font-size:14px;">{{ item.egf_needed}}</td>
+
+																	<td>
+																		{% if item.dermato_scanned %}
+																		<p style="color:#51b4d4;"><strong>SCANNED</strong></p>
+																		{% else %}
+																		<a href="/dermato_calculation/{{ item.project_id }}/">
+																			<button class="dermato-button">SCAN</button>
+																		</a>
+																		{% endif %}
+																	</td>
+																</tr>
+																{% endfor %}
+														</tbody>
+													  </table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+
+	   <!-- JavaScript files -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            });
+        });
+
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+
+	<style>
+        /* Dermato Button Styling */
+        .dermato-button {
+            background-color:#51b4d4; /* Green background */
+            border: none;
+            color: white; /* White text */
+            padding: 12px 24px; /* Padding */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px; /* Font size */
+            margin: 4px 2px; /* Margin */
+            cursor: pointer;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+        }
+
+        /* Hover effect for dermato-button */
+        .dermato-button:hover {
+            background-color: #51b4d4; /* Darker green on hover */
+            transform: scale(1.05); /* Slightly larger on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        /* Scanned button style */
+        .dermato-scanned-button {
+            background-color: #51b4d4; /* Grey background */
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: default; /* No pointer cursor */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+    </style>
+
+	</body>
+</html>
+

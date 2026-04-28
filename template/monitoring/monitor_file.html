@@ -1,0 +1,214 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+
+  <head>
+
+
+  	<title>monitor_file</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+
+
+
+	   <base href="/static/monitoring/monitor_homepage/">
+    <title>monitor_homepage</title>
+    <!--meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Forest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+      Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+      addEventListener("load", function () {
+      	setTimeout(hideURLbar, 0);
+      }, false);
+
+      function hideURLbar() {
+      	window.scrollTo(0, 1);
+      }
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+
+
+
+	</head>
+	<body>
+
+	<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+
+
+	<div class="header-outs " id="header">
+      <div class="header-w3layouts">
+        <div class="container-fluid">
+          <nav>
+            <div id="logo">
+              <h1 style="font-family: 'Roboto', sans-serif;"><a>MONITORING</a></h1>
+            </div>
+            <label for="drop" class="toggle">Menu</label>
+            <input type="checkbox" id="drop" />
+            <ul class="menu mt-lg-3 mt-2">
+              <li class="monitor_home"><a href="/monitor_home/">HOME</a></li>
+              <li ><a href="/dermatoreports/">DERMATO REPORTS</a></li>
+              <li><a href="/monitorscan/">MONITOR SCAN</a></li>
+              <li class="active"><a href="/monitorfile/">MONITOR FILE</a></li>
+              <li ><a href="/monitor_logout/">LOGOUT</a></li>
+            </ul>
+            <div class="clearfix"></div>
+          </nav>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- //nav -->
+      <!-- //header -->
+      <div class="container">
+        <div class="slide-info text-center">
+            <section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+                    <br>
+                    <br>
+					<h4 class="text-center mb-4" style="margin-top:-300px;color:BLACK;font-size:40px;font-family: 'Roboto', sans-serif;"> MONITORING FILE</h4>
+					<div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary" style="text-align:center;background-color:#93fc38;">
+					      <tr>
+					        <th style="color:black;">PROJECT ID</th>
+							  <th style="color:black;">TIME_TAKEN_FOR_CURING(months)</th>
+							  <th style="color:black;">TYPES OF FOOD TO FOLLOW</th>
+                              <th style="color:black;">PATIENT PROGRESS</th>
+
+						  </tr>
+						</thead>
+							<tbody>
+							{% for demo in data %}
+							<tr>
+								<td>{{ demo.project_id }}</td>
+								<td>{{ demo.time_taken_for_curing }}</td>
+								<td>{{ demo.types_of_food_to_follow }}</td>
+                                <td>{{ demo.patient_progress }}</td>
+							</tr>
+							{% endfor %}
+
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--          <div class="banner-top-grid">-->
+<!--            <h4>Global Warming</h4>-->
+<!--          </div>-->
+<!--          <h5>Save Forest And Save Earth</h5>-->
+<!--          <div class="slide-info-txt">-->
+<!--            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt utadipiscing elit sed do eiusmod tempor incididunt Lorem</p>-->
+<!--          </div>-->
+<!--          <div class="two-mid-button d-flex justify-content-center mt-lg-5 mt-md-4 mt-sm-4 mt-3">-->
+<!--            <div class="read-buttn ">-->
+<!--              <a href="#about" class=" scroll">About Us</a>-->
+<!--            </div>-->
+<!--            <div class="view-buttn">-->
+<!--              <a href="#contact" class=" scroll">Join Us</a>-->
+<!--            </div>-->
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- //banner -->
+
+
+
+
+
+   <!-- JavaScript files -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            });
+        });
+
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+
+
+	</body>
+</html>
+

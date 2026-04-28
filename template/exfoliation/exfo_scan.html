@@ -1,0 +1,207 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+  	<title>exfo_scan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+
+
+	 <base href="/static/exfoliation/exfo_homepage/">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car Transko - Auto Transport Category Bootstrap Responsive Template | Home :: W3layouts </title>
+    <!-- google fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+
+
+
+
+
+	</head>
+	<body>
+
+    <script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+
+	<!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a  style="color:white;font-size:40px;">
+                        EXFOLIATION
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/exfo_home/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll " href="/exfo_requirements/">REQUIREMENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll active" href="/exfo_scan/">EXFO SCAN</a>
+                        </li>
+
+                        <li class="nav-item me-lg-4">
+                            <a class="nav-link scroll" href="/exfo_file/">EXFO FILE</a>
+                        </li>
+                        <li class="nav-item me-lg-4">
+                            <a class="nav-link scroll" href="/exfo_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/Banner-Start-->
+    <!--/main-banner-->
+    <div class="w3l-main-slider position-relative" id="home">
+        <div class="w3l-bannerhny-content">
+            <div class="container">
+                <div class="w3l-bannerhny-info">
+                    <section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="text-center mb-4" style="color:white;font-size:40px;">EXFOLIATION SCAN</h4>
+					<div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary" style="background-color:#ff6a00;text-align:center;">
+					      <tr>
+					       <th>PROJECT ID</th>
+                              <th>NAME OF PATIENT</th>
+                              <th>AGE</th>
+                              <th>GENDER</th>
+                              <th>TYPE OF WOUND</th>
+                              <th>WOUND PLACEMENT</th>
+                              <th>DEPTH OF WOUND</th>
+                              <th>CIRCUMFERENCE OF WOUND</th>
+                              <th>ACTION</th>
+                          </tr>
+                        </thead>
+                            <tbody>
+                            {% for demo in data %}
+                            <tr>
+                                <td>{{ demo.project_id }}</td>
+                                <td>{{ demo.name_of_the_patient }}</td>
+                                <td>{{ demo.age }}</td>
+                                <td>{{ demo.gender }}</td>
+                                <td>{{ demo.type_of_wound }}</td>
+                                <td>{{ demo.wound_placement }}</td>
+                                <td>{{ demo.depth_of_wound }}</td>
+                                <td>{{ demo.circumference_of_the_wound }}</td>
+                             <td>
+                                {% if demo.exfo_scanned %}
+                                 <p style="color:black;">SCANNED</p>
+                                {% else %}
+                                <a href="/exfo_calculation/{{ demo.project_id }}/">
+                                    <button class="fancy-button">SCAN</button>
+                                </a>
+                                {% endif %}
+                            </td>
+                            </tr>
+                            {% endfor %}
+
+					    </tbody>
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//main-banner-->
+
+ <style>
+        /* Button Styling */
+        .fancy-button {
+            background-color: #ff6a00; /* Orange background */
+            border: none;
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px; /* Font size */
+            margin: 4px 2px; /* Margin */
+            cursor: pointer;
+            border-radius: 8px; /* Rounded corners */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+        }
+
+        /* Hover effect */
+        .fancy-button:hover {
+            background-color: #e65c00; /* Darker orange on hover */
+            transform: scale(1.05); /* Slightly larger on hover */
+        }
+
+        /* Scanned button style */
+        .scanned-button {
+            background-color: #ff6a00; /* Green background */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: default; /* No pointer cursor */
+            border-radius: 8px;
+        }
+    </style>
+
+
+
+
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+

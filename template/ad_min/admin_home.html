@@ -1,0 +1,281 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <base href="/static/ad_min/admin_home/">
+    <title>adminhome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Smelter a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/simpleLightbox.css" rel='stylesheet' type='text/css' />
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800" rel="stylesheet">
+
+    <style>
+body {
+  font-family: 'Roboto', serif;
+}
+</style>
+
+</head>
+
+<body>
+
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+    <header>
+        <div class="header_top" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="logo text-left">
+                    <h1>
+                        <a class="navbar-brand" href="index.html">
+                            <i class="fas fa-podcast"></i> ADMIN</a>
+                    </h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                              
+                            </span>
+
+                        </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-lg-auto text-right">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/adminhome/">HOME
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      APPROVAL
+                                       <i class="fas fa-angle-down"></i>
+                                    </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: 'Roboto', serif;">
+                                <a class="dropdown-item" href="/exfoapprove/" style="font-family: 'Roboto', serif;">EXFOLIATION</a>
+                                <a class="dropdown-item" href="/bioapprove/" title="" style="font-family: 'Roboto', serif;">BIOADHESION</a>
+                                <a class="dropdown-item" href="/dermatoapprove/" style="font-family: 'Roboto', serif;">DERMATOPLASTY</a>
+                                <a class="dropdown-item" href="/monitorapprove/" title="" style="font-family: 'Roboto', serif;">MONITORING</a>
+                                <a class="dropdown-item" href="/evalapprove/" style="font-family: 'Roboto', serif;">EVALUATION</a>
+
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link tooltip-blog" href="/requirements/">REQUIREMENTS </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      MANAGE REPORTS
+                                       <i class="fas fa-angle-down"></i>
+                                    </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/exfomanage/" style="font-family: 'Roboto', serif;">EXFOLIATION</a>
+                                <a class="dropdown-item" href="/biomanage/" title="" style="font-family: 'Roboto', serif;">BIOADHESION</a>
+                                <a class="dropdown-item" href="/dermatomanage/" style="font-family: 'Roboto', serif;">DERMATOPLASTY</a>
+                                <a class="dropdown-item" href="/monitormanage/" title="" style="font-family: 'Roboto', serif;">MONITORING</a>
+                                <a class="dropdown-item" href="/evalmanage/" style="font-family: 'Roboto', serif;">EVALUATION</a>
+                            </div>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/managestatus/">MANAGE STATUS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout/">LOGOUT</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </div>
+    </header>
+    <!--//header-->
+    <!--/banner-->
+    <div class="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="carousel-caption">
+                        <h3>Responsible for managing user accounts, permissions, and data entries</h3>
+
+                    </div>
+                </div>
+                <div class="carousel-item item2">
+                    <div class="carousel-caption">
+                        <h3>Enables oversight and control of system operations by administrators</h3>
+
+                    </div>
+                </div>
+                <div class="carousel-item item3">
+                    <div class="carousel-caption">
+                        <h3>Provides tools for monitoring user activity and generating detailed reports</h3>
+
+                    </div>
+                </div>
+                <div class="carousel-item item4">
+                    <div class="carousel-caption">
+                        <h3>Ensures system security and maintains data integrity</h3>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+        </div>
+    </div>
+    <!--/model-->
+
+    <!--//banner-->
+    <section class="banner-bottom">
+        <div class="container">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row inner-sec-wthree">
+
+                <div class="col-lg-5 bt-bottom-info" data-aos="fade-right">
+                    <h5>ABOUT</h5>
+
+                </div>
+                <div class="col-lg-7 bt-bottom-info" data-aos="fade-left">
+                    <p>The Admin module is responsible for managing user accounts,
+                        data entries, and overseeing the overall system operations.
+                        It allows administrators to control access permissions, monitor
+                        user activities, and generate reports. This module ensures the
+                        system runs smoothly by maintaining security and data integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- //js -->
+    <!-- simpleLightbox -->
+    <script src="js/simpleLightbox.js"></script>
+    <script>
+        $('.proj_gallery_grid a').simpleLightbox();
+
+    </script>
+    <!-- //simpleLightbox -->
+	 <!-- /js files -->
+	<link href='css/aos.css' rel='stylesheet prefetch' type="text/css" media="all" />
+	<link href='css/aos-animation.css' rel='stylesheet prefetch' type="text/css" media="all" />
+	<script src='js/aos.js'></script>
+	<script src="js/aosindex.js"></script>
+	<!-- //js files -->
+    <!-- flexSlider -->
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script>
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+
+    </script>
+
+    <!-- //flexSlider -->
+
+    <!-- stats -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+
+    </script>
+    <!-- //stats -->
+
+    <!-- start-smoth-scrolling -->
+    <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+
+    </script>
+    <!-- start-smoth-scrolling -->
+
+    <script>
+        $(document).ready(function() {
+            /*
+            						var defaults = {
+            				  			containerID: 'toTop', // fading element id
+            							containerHoverID: 'toTopHover', // fading element hover id
+            							scrollSpeed: 1200,
+            							easingType: 'linear' 
+            				 		};
+            						*/
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+
+    </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- /js -->
+    <script src="js/bootstrap.js"></script>
+    <!-- //js -->
+
+
+</body>
+
+</html>
