@@ -1,0 +1,251 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<!-- Head -->
+<head>
+
+<style>
+
+.back-button input[type="button"], .back-button input[type="submit"] {
+    width: 25%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 100;
+    background-color: transparent;
+    color: #CCC;
+    border: 1px solid rgba(238, 238, 238, 0.41);
+    border-width: thin;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+}
+
+.back-button input[type="button"]:hover, .back-button input[type="submit"]:hover {
+    background-color: #1702f7;
+    border: 1px solid #FFF;
+    color: #FFF;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+}
+
+.LR-button input[type="button"], .LR-button input[type="submit"] {
+    width: 30%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 100;
+    background-color: transparent;
+    color: #CCC;
+    border: 1px solid rgba(238, 238, 238, 0.41);
+    border-width: thin;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+}
+
+.LR-button input[type="button"]:hover, .LR-button input[type="submit"]:hover {
+    background-color: #1702f7;
+    border: 1px solid #FFF;
+    color: #FFF;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+}
+
+
+
+.login-link, .register-link {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.login-link a, .register-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover, .register-link a:hover {
+    text-decoration: underline;
+
+.register-link p {
+    color: white;
+}
+}
+
+</style>
+
+
+
+	<base href="/static/exfoliation/reg_log/">
+	<title>exfo-reg-log</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Library Member Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+		<link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<!-- //Fonts -->
+
+
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+	<h1>EXFOLIATION REGISTER & LOGIN FORM</h1>
+
+	<div class="container w3layouts agileits">
+
+		<div class="login w3layouts agileits">
+			<h2>LOGIN</h2>
+			<form action="/exfo_login/" method="post">
+				{% csrf_token %}
+				<input type="text" name="email" placeholder="E-mail" autocomplete="off" required="">
+				<input type="password" id="password" name="password" placeholder="Password" required="">
+				<div class="LR-button" >
+					<input type="submit" value="Log In">
+				</div>
+
+			</form>
+			<br>
+			<ul class="tick w3layouts agileits">
+				<li>
+					<input type="checkbox"  autocomplete="off" id="brand1" onclick="togglePassword()">
+					<label for="brand1"><span></span>Show Password</label>
+				</li>
+			</ul>
+<!--			<div class="send-button w3layouts agileits">-->
+<!--				<form  action="/exfo_login/">-->
+<!--					<input type="submit" value="Log In">-->
+<!--				</form>-->
+<!--			</div>-->
+
+			<div class="login-link">
+                <p style="color:white;"><span>Don't have an account? <a href="/exfo_register/">Register</a></span></p>
+            </div>
+
+			<div class="clear"></div>
+		</div>
+
+
+
+
+		<div class="register w3layouts agileits">
+			<h2>REGISTER</h2>
+			<form action="/exfo_register/" method="post">
+				{% csrf_token %}
+				<input type="text" name="name" placeholder="Name" autocomplete="off" required="">
+				<input type="text" name="email" placeholder="Email" autocomplete="off" required="">
+				<input name="phone" id="phone" type="text" value="" autocomplete="off" placeholder="Contact Number"  required pattern="[6-9]{1}[0-9]{9}"
+                               title="Phone number must be 10 digits long and start with a number from 6 to 9">
+				<input type="text" name="department" placeholder="Department" autocomplete="off" value="Exfoliation" readonly required="">
+				<div class="LR-button" >
+					<input type="submit" value="Register">
+				</div>
+			</form>
+<!--			<div class="send-button w3layouts agileits">-->
+<!--				<form action="/exfo_register/">-->
+<!--					<input type="submit" value="Register" >-->
+<!--				</form>-->
+<!--			</div>-->
+
+			<div class="register-link">
+                <p><span>Already have an account? <a href="/exfo_login/">Login</a></span></p>
+            </div>
+
+			<div class="clear"></div>
+		</div>
+			<!-- Back Button -->
+		<br>
+		<br>
+        <div class="back-button" style="margin-top:48%;">
+            <form>
+                <input type="button" value="Back" onclick="location.href='/';">
+            </form>
+        </div>
+	<!-- //Back Button -->
+		<div class="clear"></div>
+
+	</div>
+
+
+
+
+<script type="text/javascript">
+		function togglePassword() {
+			var passwordField = document.getElementById("password");
+			if (passwordField.type === "password") {
+				passwordField.type = "text";
+			} else {
+				passwordField.type = "password";
+			}
+		}
+</script>
+
+    <script>
+document.getElementById('phone').addEventListener('input', function (e) {
+    var phone = e.target.value;
+    var pattern = /^[6-9][0-9]{9}$/;
+
+    if (!pattern.test(phone)) {
+        e.target.setCustomValidity("Please enter a valid phone number.");
+    } else {
+        e.target.setCustomValidity("");
+    }
+});
+
+document.getElementById('phone').addEventListener('invalid', function (e) {
+    if (e.target.validity.patternMismatch) {
+        e.target.setCustomValidity("Please enter a valid phone number.");
+    }
+});
+</script>
+
+
+
+
+</body>
+<!-- //Body -->
+
+</html>

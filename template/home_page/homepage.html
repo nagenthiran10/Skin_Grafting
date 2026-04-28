@@ -1,0 +1,172 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<base href="/static/home_page/">
+<title>homepage</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/lightbox.css">
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Collective Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script> 
+<!-- //js -->	
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+<!-- image-hover -->
+<script type="text/javascript" src="js/mootools-yui-compressed.js"></script>
+<!-- //image-hover -->
+<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+	<!--navigation-->
+	<div class="top-nav">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header navbar-left">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1><a class="navbar-brand wow bounceIn animated" data-wow-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;font-size: 1.2em;" href="/" >SKIN GRAFTING</a></h1>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="hvr-bounce-to-bottom active"><a href="/">HOME</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="/adminlogin/">ADMIN</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="/exfo_register/">EXFOLIATION</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="/bio_register/">BIOADHESION</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="/dermato_register/">DERMATOPLASTY</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="/monitor_register/">MONITORING</a></li>
+						<li class="hvr-bounce-to-bottom"><a href="/eval_register/">EVALUATION</a></li>
+					</ul>	
+					<div class="clearfix"> </div>
+				</div>
+			</div>	
+		</nav>		
+	</div>	
+	<!--navigation-->
+	<!--banner-->
+	<div class="banner">
+		<div class="banner-title"> 
+			<div class="container">
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="banner-text"> 
+								<h2>DermTech Nexus The New <br>Frontier in Skin Grafting</h2>
+							</div>
+						</li>
+
+					</ul>	
+				</div>			
+			</div>
+		</div>	
+	</div>	
+	<!--//banner-->
+	<!--about-->
+	<div class="about" id="about">
+		<div class="container">
+			<h3 class="title" style="font-size:40px;">Welcome to </h3>
+			<div class="col-md-8 about-right wow fadeInRight animated" data-wow-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">
+				<h4>Innovative Techniques in Skin Grafting: Advances and Applications</h4>
+				<p> Skin grafting is a crucial surgical procedure
+					used to treat extensive wounds, burns, and other
+					skin-related injuries. Traditionally, skin grafts
+					involve the transplantation of healthy skin from one
+					part of the body to another. However, with advancements
+					in medical technology and research, innovative techniques
+					in skin grafting have emerged, offering improved outcomes,
+					reduced scarring, and faster recovery times.</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+	<!--//about-->
+
+	<!-- banner-text Slider starts Here -->
+		<script src="js/responsiveslides.min.js"></script>
+		 <script>
+			// You can also use "$(window).load(function() {"
+				$(function () {
+				// Slideshow 3
+					$("#slider3").responsiveSlides({
+					auto: true,
+					pager:true,
+					nav:true,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+					$('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});	
+			});
+		</script>
+		<!--//End-slider-script -->
+		<!-- start-smoth-scrolling-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>	
+		<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$(".scroll").click(function(event){		
+						event.preventDefault();
+						$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+					});
+				});
+		</script>
+		<!--//end-smoth-scrolling-->
+		<!--smooth-scrolling-of-move-up-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

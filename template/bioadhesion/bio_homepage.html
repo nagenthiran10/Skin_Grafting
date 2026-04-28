@@ -1,0 +1,222 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <base href="/static/bioadhesion/bio_homepage/">
+    <title>bio-homepage</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Medizin Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/slider.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+
+<body>
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+        <!-- mian-content -->
+        <div class="main-w3layouts-header-sec">
+
+            <!-- header -->
+            <header>
+                <div class="container">
+                    <div class="header d-lg-flex justify-content-between align-items-center">
+                        <div class="header-section">
+                            <h1>
+                                <a class="navbar-brand logo editContent" href="index.html">
+                                    BIOADHESION
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="nav_section">
+                            <nav>
+                                <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fa fa-bars" aria-hidden="true"></span></label>
+                                <input type="checkbox" id="drop" />
+                                <ul class="menu">
+                                    <li class="active"><a href="/bio_home/">HOME</a></li>
+                                    <li><a href="/exforeports/">EXFO REPORTS </a></li>
+                                    <li>
+                                        <!-- First Tier Drop Down -->
+                                        <label for="drop-2" class="toggle">BIO SCAN <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                                        <a href="/bio_scan/">BIO SCAN <span  aria-hidden="true"></span></a>
+<!--                                        <input type="checkbox" id="drop-2" />-->
+<!--                                        <ul class="inner-dropdown">-->
+<!--                                            <li><a href="#stats">Stats</a></li>-->
+<!--                                            <li><a href="#lab">Laboratory</a></li>-->
+<!--                                            <li><a href="#test">Reviews</a></li>-->
+<!--                                        </ul>-->
+                                    </li>
+                                    <li><a href="/bio_file/">BIO FILE</a></li>
+                                    <li><a href="/bio_logout/">LOGOUT</a></li>
+
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <!-- //header -->
+            <!-- banner -->
+            <section class="banner_w3pvt" id="home">
+                <div class="csslider infinity" id="slider1">
+                    <input type="radio" name="slides" checked="checked" id="slides_1" />
+                    <input type="radio" name="slides" id="slides_2" />
+                    <input type="radio" name="slides" id="slides_3" />
+                    <input type="radio" name="slides" id="slides_4" />
+                    <ul>
+                        <li>
+                            <div class="banner-top">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>Reviving Skin, Renewing Lives</h3>
+                                                <h4>Advanced Technology,Better Life</h4>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-top1">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>Precision Care for Seamless Skin Restoration</h3>
+                                                <h4>Advanced Technology,Better Life</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-top2">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>Advanced Techniques for Smooth Skin Recovery</h3>
+                                                <h4>Advanced Technology,Better Life</h4>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-top3">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="banner-info">
+                                            <div class="banner-w3layouts-inner">
+                                                <h3>Bridging the Gap to Healthier Skin</h3>
+                                                <h4>Advanced Technology,Better Life</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_1"></label>
+                        <label for="slides_2"></label>
+                        <label for="slides_3"></label>
+                        <label for="slides_4"></label>
+                    </div>
+                </div>
+            </section>
+            <!-- //banner -->
+
+
+
+        </div>
+        <!-- //header -->
+        <!--/banner-bottom -->
+        <section class="banner-bottom py-5">
+            <div class="container-fluid inner-sec-w3ls">
+                <div class="feature-grids row text-center">
+                    <div class="col-lg-3 gd-bottom one">
+                        <div class="bottom-gd">
+                            <span class="fa fa-wheelchair" aria-hidden="true"></span>
+                            <h3 class="mb-2">Modern Equipment</h3>
+                            <p style="text-align: justify;">Modern equipment enhances medical procedures
+                                with precision and efficiency, ensuring accurate
+                                diagnostics and effective treatments.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-user-md" aria-hidden="true"></span>
+                            <h3 class="mb-2">
+                               Advanced Process </h3>
+                            <p style="text-align: justify;">Advanced processes utilize the latest technology and
+                                techniques to achieve superior results and efficiency.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-life-ring" aria-hidden="true"></span>
+                            <h3 class="mb-2">Health Monitoring</h3>
+                            <p style="text-align: justify;">Health monitoring involves continuously tracking and analyzing vital signs
+                                and other health metrics to ensure well-being and detect potential issues early.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 gd-bottom">
+                        <div class="bottom-gd">
+                            <span class="fa fa-folder-open-o" aria-hidden="true"></span>
+                            <h3 class="mb-2">Innovative Solutions</h3>
+                            <p style="text-align: justify;">Innovative solutions apply cutting-edge technologies
+                                and novel approaches to solve complex problems and enhance efficiency. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //banner-bottom -->
+
+</body>
+
+</html>

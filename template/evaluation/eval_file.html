@@ -1,0 +1,234 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+
+
+<title>eval_file</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+
+
+
+    <base href="/static/evaluation/eval_homepage/">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eval-homepage</title>
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+
+
+</head>
+
+<body style="background-image: url('/static/evaluation/eval_homepage/assets/images/eval.jpg');">
+
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" >EVALUATION
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                   <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/eval_home/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/monitorreports/">MONITOR REPORTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eval_scan/">EVAL SCAN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/eval_file/">EVAL FILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eval_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+<!--                    &lt;!&ndash; search-right &ndash;&gt;-->
+<!--                    <div class="header-search position-relative">-->
+<!--                        <div class="search-right mx-lg-2">-->
+<!--                            <a href="#search" class="btn search-btn p-0" title="search">-->
+<!--                                <i class="fas fa-search"></i></a>-->
+<!--                            &lt;!&ndash; search popup &ndash;&gt;-->
+<!--                            <div id="search" class="pop-overlay">-->
+<!--                                <div class="popup">-->
+<!--                                    <form action="#search" method="GET" class="search-box">-->
+<!--                                        <input type="search" placeholder="Enter Keyword..." name="search"-->
+<!--                                            required="required" autofocus="">-->
+<!--                                        <button type="submit" class="btn"><span class="fas fa-search"-->
+<!--                                                aria-hidden="true"></span></button>-->
+<!--                                    </form>-->
+<!--                                </div>-->
+<!--                                <a class="close" href="#close">×</a>-->
+<!--                            </div>-->
+<!--                            &lt;!&ndash; //search popup &ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;//search-right&ndash;&gt;-->
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+<!-- banner section -->
+    <section id="home" class="w3l-banner py-5">
+        <div class="banner-content">
+            <div class="container py-4">
+                <div class="row align-items-center pt-sm-5 pt-4">
+
+						<section class="ftco-section">
+							<div class="container">
+								<div class="row justify-content-center">
+
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<h4 class="text-center mb-4" style="margin-top:-50px;font-size:40px;">EVALUATION FILE</h4>
+										<br>
+										<div class="table-wrap">
+											<table class="table">
+											<thead class="thead-primary" style="background-color:BLACK;text-align:center;">
+											   <tr>
+                                                    <th colspan="4" style="padding: 10px; font-size: 16px;">EXISTING GRAFTING METHOD</th>
+                                                    <th colspan="4" style="padding: 10px; font-size: 16px;">PROPOSED GRAFTING METHOD</th>
+                                                </tr>
+                                                <tr>
+                                                    <th style="padding: 10px; font-size: 16px;">PROJECT_ID</th>
+                                                    <th style="padding: 10px; font-size: 16px;">SIDE EFFECTS (%)</th>
+                                                    <th style="padding: 10px; font-size: 16px;">PERCENTAGE OF SCAR (%)</th>
+                                                    <th style="padding: 10px; font-size: 16px;">SIDE EFFECTS (%)</th>
+                                                    <th style="padding: 10px; font-size: 16px;">PERCENTAGE OF SCAR (%)</th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody style="font-size: 16px;">
+                                                    {% for demo in data %}
+                                                    {% if demo.eval_proposed_scanned%}
+                                                    <tr style="height: 50px;">
+                                                        <td style="padding: 10px; text-align: center;">{{ demo.project_id }}</td>
+                                                        <td style="padding: 10px; text-align: center;">{{ demo.predicted_existing_side_effects }}</td>
+                                                        <td style="padding: 10px; text-align: center;">{{ demo.predicted_existing_scar }}</td>
+                                                        <td style="padding: 10px; text-align: center;">{{ demo.predicted_proposed_side_effects }}</td>
+                                                        <td style="padding: 10px; text-align: center;">{{ demo.predicted_proposed_scar }}</td>
+                                                    </tr>
+                                                    {% endif %}
+                                                    {% endfor %}
+                                                </tbody>
+
+										  </table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner section -->
+
+
+
+   <!-- JavaScript files -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            });
+        });
+
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+	</body>
+</html>
+

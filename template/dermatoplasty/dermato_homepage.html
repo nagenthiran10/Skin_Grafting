@@ -1,0 +1,177 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<base href="/static/dermatoplasty/dermato_homepage/">
+<title>dermato-homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Spa Care Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smart phone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/prettySticky.css" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script> 
+<!-- //js --> 
+</head>
+<body>
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+	<!-- banner -->
+	<div id="home" class="w3banner">
+		<div class="banner-info">
+			<!-- navigation -->
+			<div class="top-nav">
+				<nav>
+					<div class="container">
+						<div class="navbar-header logo">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<h1><a href="index.html">DERMATOPLASTY</a></h1>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-right">
+								<li><a href="/dermato_home/" class="link-kumya active scroll"><span data-letters="HOME">HOME</span></a></li>
+								<li><a href="/bioreports/" class="link-kumya "><span data-letters="BIO REPORTS">BIO REPORTS</span></a></li>
+								<li><a href="/dermatoscan/" class="link-kumya "><span data-letters="DERMATO SCAN">DERMATO SCAN</span></a></li>
+								<li><a href="/dermatofile/" class=" link-kumya"
+									   role="button" aria-haspopup="true" aria-expanded="false">
+									<span data-letters="DERMATO FILE">DERMATO FILE</span></a>
+								</li>
+								<li><a href="/dermato_logout/" class="link-kumya"><span data-letters="LOGOUT">LOGOUT</span></a></li>
+							</ul>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</nav>
+			</div>	
+			<!-- //navigation -->
+			<div class="banner-text">
+				<!-- banner Slider starts Here -->
+				<script src="js/responsiveslides.min.js"></script>
+				<script>
+					// You can also use "$(window).load(function() {"
+					$(function () {
+					  // Slideshow 3
+					  $("#slider3").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: false,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						  $('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+						  $('.events').append("<li>after event fired.</li>");
+						}
+					  });
+				
+					});
+				</script>
+				<!-- //End-slider-script -->
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="bnr-agileinfo">
+								<h2>Healing Through Innovation, Expert Skin Grafting Solutions</h2>
+								<h3>Each layer of the graft is carefully applied to ensure seamless
+									integration and the best possible recovery outcomes.</h3>
+
+							</div>	
+						</li>
+						<li>
+							<div class="bnr-agileinfo">
+								<h4>Redefining Recovery with State-of-the-Art Skin Grafting</h4>
+								<h3> Advanced grafting techniques are revolutionizing the healing process,
+									offering faster and more effective recovery.</h3>
+
+							</div>	
+						</li>
+						<li>
+							<div class="bnr-agileinfo">
+								<h4>Precision in Every Layer for Optimal Healing</h4>
+								<h3>Cutting-edge technology and expertise combine to provide
+									innovative solutions for skin grafting, enhancing the healing journey.</h3>
+
+							</div>	
+						</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- welcome -->
+	<div class="welcome w3">
+		<div class="container">
+			<div class="col-md-5 welcome-agileleft">
+				<img src="images/imag.png" alt=""/>
+			</div>
+			<div class="col-md-7 welcome-right">
+				<h3 class="wthree-title">Wound Debridement</h3>
+				<p>Wound debridement involves the careful removal of dead or
+					infected tissue to promote faster and more effective healing </p>
+				<div class="welcome-info">
+					<div class="col-md-2 welcome-text w3-agiletext-left">
+						<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					</div>
+					<div class="col-md-10 welcome-text w3-agiletext-right">
+						<h4>Tissue Debridement</h4>
+						<p style="text-align:justify;">Tissue debridement is the process of removing dead, damaged,
+							or infected tissue from a lesion to enhance the healing
+							process and prevent further infection </p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="welcome-info">
+					<div class="col-md-2 welcome-text w3-agiletext-left">
+						<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					</div>
+					<div class="col-md-10 welcome-text w3-agiletext-right">
+						<h4>Lesion Cleansing</h4>
+						<p style="text-align:justify;">Lesion cleansing is the careful cleaning of a damaged
+							or infected area to remove contaminants and
+							promote faster, more effective healing.</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+
+
+
+	<!-- //welcome -->
+	<!-- script-for prettySticky -->
+	<script src="js/prettySticky.js"></script>
+	<!-- //script-for prettySticky -->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.js"></script>
+
+
+</body>
+</html>

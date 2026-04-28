@@ -1,0 +1,345 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+  	<title>exfo_req</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+
+
+	 <base href="/static/exfoliation/exfo_homepage/">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car Transko - Auto Transport Category Bootstrap Responsive Template | Home :: W3layouts </title>
+    <!-- google fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+
+
+
+
+
+	</head>
+  <style>
+
+
+
+.button-4 {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+.button-4:hover {
+  border: 2px solid #f01140;
+  background-color: white;
+}
+
+.button-4:-webkit-details-marker {
+  display: none;
+}
+
+
+
+.input {
+  border: 2px solid transparent;
+  width: 15em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.input:hover,
+.input:focus {
+  border: 2px solid #f01140;
+  background-color: white;
+}
+
+</style>
+	<body>
+ <script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+	<!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a  style="color:white;font-size:40px;">
+                        EXFOLIATION
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item" style="">
+                            <a class="nav-link " aria-current="page" href="/exfo_home/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll active" href="/exfo_requirements/">REQUIREMENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="/exfo_scan/">EXFO SCAN</a>
+                        </li>
+
+                        <li class="nav-item me-lg-4">
+                            <a class="nav-link scroll" href="/exfo_file/">EXFO FILE</a>
+                        </li>
+                        <li class="nav-item me-lg-4">
+                            <a class="nav-link scroll" href="/exfo_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/Banner-Start-->
+    <!--/main-banner-->
+    <div class="w3l-main-slider position-relative" id="home">
+        <div class="w3l-bannerhny-content">
+            <div class="container">
+                <div class="w3l-bannerhny-info">
+                    <section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h4 class="text-center mb-4" style="color:white;font-size:40px;">LEAD REQUIREMENTS</h4>
+					<div class="table-wrap">
+						<table class="table">
+					    <thead class="thead-primary" style="background-color:#ff6a00;text-align:center;">
+					      <tr>
+					        <th>PROJECT_ID</th>
+					        <th>NAME</th>
+					        <th>AGE</th>
+					        <th>GENDER</th>
+					        <th>TYPE OF WOUND</th>
+					        <th>WOUND PLACEMENT</th>
+							  <th>DEPTH OF WOUND(MM)</th>
+					        <th>CIRCUMFERENCE OF WOUND(DIAMETER)(CM)</th>
+                              <th colspan="3">ACTION</th>
+					      </tr>
+					    </thead>
+
+                            <tbody style="font-size: 16px;">
+                                      {% for item in data %}
+                                      {% if item.exfo_decrypt is False %}
+                                      <tr>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.project_id }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_name_of_the_patient }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_age }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_gender }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_type_of_wound }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_wound_placement }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_depth_of_wound }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_circumference_of_the_wound }}</td>
+
+                                        {% if item.exfo_get_key is False %}
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">
+                                          <a href="/getkey_exfo/{{item.project_id}}/">
+                                            <button class="fancy-button" role="button"><strong>Get Key</strong></button>
+                                          </a>
+                                        </td>
+                                        {% else %}
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">
+                                          <p style="color:#2B1C10;"><strong>Got Key</strong></p>
+                                        </td>
+                                        {% endif %}
+
+                                        <form action="/decrypt_data_exfo/{{item.project_id}}/" method="POST">
+                                          {% csrf_token %}
+                                          <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">
+                                            <input placeholder="Decryption Key" class="dark-input" required autocomplete="off" name="decryption_key" />
+                                          </td>
+                                          <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">
+                                            <button class="fancy-button" role="button" type="submit">
+                                              {% if item.exfo_decrypt is False %}
+                                              <strong>Decrypt</strong>
+                                              {% else %}
+                                              <strong>Decrypted</strong>
+                                              {% endif %}
+                                            </button>
+                                          </td>
+                                        </form>
+                                      </tr>
+                                      {% else %}
+                                      <tr>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.project_id }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.name_of_the_patient }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.age }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.gender }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.type_of_wound }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.wound_placement }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.depth_of_wound }}</td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.circumference_of_the_wound }}</td>
+
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">...</td>
+                                        <td style="color:#2B1C10;text-align:center;background-color: white;"><strong>DECRYPTED</strong></td>
+                                        <td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">...</td>
+                                      {% endif %}
+                                      {% endfor %}
+                                    </tbody>
+
+
+
+
+
+					  </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--//main-banner-->
+
+
+<style>
+    .action-container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Adjust the space between elements as needed */
+    }
+
+    .action-container button,
+    .action-container input {
+        margin: 0; /* Remove default margin if necessary */
+    }
+
+  .fancy-button {
+  background-color: #4B3621; /* Darker blackish-brown color */
+  color: white;
+  padding: 6px 12px; /* Smaller padding for a smaller button */
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  font-size: 14px; /* Smaller font size */
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+  transition: transform 0.2s, background-color 0.3s;
+  white-space: nowrap; /* Ensure text stays in one line */
+}
+
+.fancy-button:hover {
+  background-color: #3B2A17; /* Even darker blackish-brown on hover */
+  transform: scale(1.03); /* Slight zoom on hover */
+}
+
+.fancy-button:active {
+  background-color: #2B1C10; /* Darker blackish-brown when pressed */
+  transform: scale(1);
+}
+
+.dark-input {
+  border: 1px solid #3a3a3a; /* Darker border color */
+  background-color: #735e4d; /* Dark gray background */
+  color: #ffffff; /* White text color for contrast */
+  padding: 5px; /* Adjust padding if needed */
+  border-radius: 4px; /* Optional: rounded corners */
+}
+.dark-input::placeholder {
+  color: white; /* Darker gray for placeholder text */
+}
+
+
+
+
+</style>
+
+
+
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,225 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+
+<!--	  TABLE HEAD-->
+
+  	<title>bio_file</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+
+<!--	HOMEPAGE HEAD-->
+
+	    <base href="/static/bioadhesion/bio_homepage/">
+    <title>bio-homepage</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Medizin Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/slider.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+    <!-- //Fonts -->
+
+
+
+
+
+	</head>
+	<body>
+	 <script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+    </script>
+
+	<!-- header -->
+            <header>
+                <div class="container">
+                    <div class="header d-lg-flex justify-content-between align-items-center">
+                        <div class="header-section">
+                            <h1>
+                                <a class="navbar-brand logo editContent" href="index.html">
+                                    BIOADHESION
+                                </a>
+                            </h1>
+                        </div>
+                        <div class="nav_section">
+                            <nav>
+                                <label for="drop" class="toggle mt-lg-0 mt-1"><span class="fa fa-bars" aria-hidden="true"></span></label>
+                                <input type="checkbox" id="drop" />
+                                <ul class="menu">
+                                    <li ><a href="/bio_home/">HOME</a></li>
+                                    <li ><a href="/exforeports/">EXFO REPORTS</a></li>
+                                    <li >
+                                        <!-- First Tier Drop Down -->
+                                        <label for="drop-2" class="toggle">BIO SCAN <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                                        <a href="/bio_scan/">BIO SCAN <span  aria-hidden="true"></span></a>
+<!--                                        <input type="checkbox" id="drop-2" />-->
+<!--                                        <ul class="inner-dropdown">-->
+<!--                                            <li><a href="#stats">Stats</a></li>-->
+<!--                                            <li><a href="#lab">Laboratory</a></li>-->
+<!--                                            <li><a href="#test">Reviews</a></li>-->
+<!--                                        </ul>-->
+                                    </li>
+                                    <li class="active"><a href="/bio_file/">BIO FILE</a></li>
+                                    <li><a href="/bio_logout/">LOGOUT</a></li>
+
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <!-- //header -->
+	 <!-- banner -->
+            <section class="banner_w3pvt" id="home">
+                <div class="csslider infinity" id="slider1">
+                    <input type="radio" name="slides" checked="checked" id="slides_1" />
+                    <input type="radio" name="slides" id="slides_2" />
+                    <input type="radio" name="slides" id="slides_3" />
+                    <input type="radio" name="slides" id="slides_4" />
+                    <ul>
+                        <li>
+                            <div class="banner-top">
+                                <div class="overlay">
+                                    <div class="container">
+                                       <section class="ftco-section">
+											<div class="container">
+												<div class="row justify-content-center">
+												</div>
+												<div class="row">
+													<div class="col-md-12">
+														<h4 class="text-center mb-4" style="color:white;margin-top:80px;
+														font-family:'Dosis',sans-serif;font-weight: 600;font-size:250%;">BIO FILE</h4>
+														<br>
+														<br>
+														<div class="table-wrap">
+															<table class="table" >
+															<thead class="thead-primary" style="background-color:#f54785;text-align:center;">
+															  <tr>
+                                                                    <th>PROJECT ID</th>
+                                                                    <th>MUSSEL NEEDED(g)</th>
+                                                                    <th>MUSSEL GLUE(mg)</th>
+                                                                    <th>ALLANTOIN(mg)</th>
+                                                                    <th>EGF(µg)</th>
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {% for demo in data %}
+                                                                <tr>
+                                                                    <td>{{ demo.project_id }}</td>
+                                                                    <td>{{ demo.mussel_glue_needed }}</td>
+                                                                    <td>{{ demo.mussel_needed }}</td>
+                                                                    <td>{{ demo.allantoin_needed }}</td>
+                                                                    <td>{{ demo.egf_needed }}</td>
+																</tr>
+																{% endfor %}
+															</tbody>
+														  </table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </section>
+            <!-- //banner -->
+
+	   <!-- JavaScript files -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            });
+        });
+
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+
+	</body>
+</html>
+

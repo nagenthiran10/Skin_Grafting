@@ -1,0 +1,241 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>eval_scan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+    <base href="/static/evaluation/eval_homepage/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eval-homepage</title>
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+</head>
+
+<body style="background-image: url('/static/evaluation/eval_homepage/assets/images/eval.jpg');">
+
+<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand">EVALUATION</a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                   <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/eval_home/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/monitorreports/">MONITOR REPORTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/eval_scan/">EVAL SCAN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eval_file/">EVAL FILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/eval_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- banner section -->
+    <section id="home" class="w3l-banner py-5">
+        <div class="banner-content">
+            <div class="container py-4">
+                <div class="row align-items-center pt-sm-5 pt-4">
+                    <section class="ftco-section">
+                        <div class="container">
+                            <div class="row justify-content-center"></div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="text-center mb-4" style="margin-top:-100px;font-size:40px;">EVALUATION SCAN</h4>
+                                    <br>
+                                    <!-- Add horizontal-scroll class here -->
+                                    <div class="horizontal-scroll">
+                                        <div class="table-wrap" style="max-height: 400px; overflow-y: auto;">
+                                            <table class="table">
+                                                <thead class="thead-primary" style="background-color:black;text-align:center;">
+                                                    <tr class="table-header">
+                                                        <th style="font-size: 15px;text-align:center;">PROJECT ID</th>
+                                                        <th style="font-size: 15px;text-align:center;">TIME_TAKEN_FOR_CURING (months)</th>
+                                                        <th style="font-size: 15px;text-align:center;">TYPES OF FOOD TO FOLLOW</th>
+                                                        <th style="font-size: 15px;text-align:center;">PATIENT PROGRESS</th>
+                                                        <th colspan="2">ACTION</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for demo in data %}
+                                                    <tr class="table-row">
+                                                        <td style="text-align:center;">{{ demo.project_id }}</td>
+                                                        <td style="text-align:center;">{{ demo.time_taken_for_curing }}</td>
+                                                        <td style="text-align:center;">{{ demo.types_of_food_to_follow }}</td>
+                                                        <td style="text-align:center;">{{ demo.patient_progress }}</td>
+                                                       <td>
+                                                            <!-- Existing Scan Button -->
+                                                            {% if demo.eval_existing_scanned %}
+                                                                <button class="button-scanned">EXISTINGSCANNED</button>
+                                                            {% else %}
+                                                                <a href="/calculate_existing/{{demo.project_id}}/">
+                                                                    <button class="button-scan">EXISTING SCAN</button>
+                                                                </a>
+                                                            {% endif %}
+                                                        </td>
+
+                                                        <td>
+                                                            <!-- Proposed Scan Button with alert if Existing Scan is not completed -->
+                                                            {% if demo.eval_existing_scanned %}
+                                                                {% if demo.eval_proposed_scanned %}
+                                                                    <a>
+                                                                        <button class="button-scanned">PROPOSEDSCANNED</button>
+                                                                    </a>
+                                                                {% else %}
+                                                                    <a href="/calculate_proposed/{{demo.project_id}}/">
+                                                                        <button class="button-scan">PROPOSEDSCAN</button>
+                                                                    </a>
+                                                                {% endif %}
+                                                            {% else %}
+                                                                <button class="button-scan" onclick="alert('You should process the existing data first')">PROPOSEDSCAN</button>
+                                                            {% endif %}
+                                                        </td>
+
+
+                                                    </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner section -->
+
+    <!-- JavaScript files -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            });
+        });
+
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+
+<style>
+    .button-scan, .button-scanned {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    .button-scan:hover, .button-scanned:hover {
+        background-color: #787472;
+    }
+
+    .button-scan {
+        background-color: black;
+    }
+
+    .button-scan:hover {
+        background-color: #787472;
+    }
+
+    /* Adjust row height */
+    .table-row {
+        height: 40px; /* Adjust as needed */
+    }
+
+    .table-row td {
+        padding: 8px; /* Adjust padding as needed */
+    }
+</style>
+
+</body>
+</html>

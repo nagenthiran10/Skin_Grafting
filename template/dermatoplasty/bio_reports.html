@@ -1,0 +1,302 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+  	<title>bio_reports</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/static/ad_min/all_approve_table/css/style.css">
+
+
+
+	  	<base href="/static/dermatoplasty/dermato_homepage/">
+<title>dermato-homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Spa Care Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	Smart phone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/prettySticky.css" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+
+
+
+	</head>
+	<body>
+	<script>
+    {% for msg in messages %}
+        alert('{{ msg }}')
+    {% endfor %}
+</script>
+
+
+
+
+
+		<!-- banner -->
+	<div id="home" class="w3banner">
+		<div class="banner-info">
+			<!-- navigation -->
+			<div class="top-nav">
+				<nav>
+					<div class="container">
+						<div class="navbar-header logo">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<h1><a href="index.html">DERMATOPLASTY</a></h1>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-right">
+								<li><a href="/dermato_home/" class="link-kumya  scroll"><span data-letters="HOME">HOME</span></a></li>
+								<li><a href="/bioreports/" class="link-kumya active"><span data-letters="BIO REPORTS">BIO REPORTS</span></a></li>
+								<li><a href="/dermatoscan/" class="link-kumya"><span data-letters="DERMATO SCAN">DERMATO SCAN</span></a></li>
+								<li><a href="/dermatofile/" class=" link-kumya" data-toggle="dropdown"
+									   role="button" aria-haspopup="true" aria-expanded="false">
+									<span data-letters="DERMATO FILE">DERMATO FILE</span><span ></span></a>
+								</li>
+								<li><a href="/dermato_logout/" class="link-kumya"><span data-letters="LOGOUT">LOGOUT</span></a></li>
+							</ul>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- //navigation -->
+			<div class="banner-text">
+				<!-- banner Slider starts Here -->
+				<script src="js/responsiveslides.min.js"></script>
+				<script>
+					// You can also use "$(window).load(function() {"
+					$(function () {
+					  // Slideshow 3
+					  $("#slider3").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: false,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						  $('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+						  $('.events').append("<li>after event fired.</li>");
+						}
+					  });
+
+					});
+				</script>
+				<!-- //End-slider-script -->
+				<div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div>
+								<section class="ftco-section">
+										<div class="container">
+											<div class="row justify-content-center">
+
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<h4 class="text-center mb-4" style="margin-top:100px;font-family:Abel-regular;">BIOADHESION REPORTS</h4>
+													<div class="table-wrap">
+														<table class="table">
+															<thead style="font-size:18px;background-color:#51b4d4;">
+																<tr>
+																	<th style="color:white; text-align:center;">PROJECT_ID</th>
+																	<th style="color:white; text-align:center;">MUSSEL NEEDED(g)</th>
+																	<th style="color:white; text-align:center;">MUSSEL GLUE(mg)</th>
+																	<th style="color:white; text-align:center;">ALLANTOIN(mg)</th>
+																	<th style="color:white; text-align:center;">EGF(µg)</th>
+																	<th colspan="3" style="color:white; text-align:center;">ACTION</th>
+																</tr>
+															</thead>
+
+															<tbody style="font-size: 16px;">
+																{% for item in data %}
+																{% if item.dermato_decrypt is False %}
+																<tr>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.project_id }}</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_mussel_glue_needed }}</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_mussel_needed }}</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_allantoin_needed }}</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.encrypted_egf_needed}}</td>
+
+																	{% if item.dermato_get_key is False %}
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;"><a href="/getkey_dermato/{{item.project_id}}/">
+																			<button class="button-4" role="button"><strong>GetKey</strong></button>
+																		</a>
+																	</td>
+																	{% else %}
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;"><p style="color:#51b4d4;"><strong>GotKey</strong></p></td>
+																	{% endif %}
+
+																	<form action="/decrypt_data_dermato/{{item.project_id}}/" method="POST">
+																		{% csrf_token %}
+																		<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">
+																			<input placeholder="Decryption Key" class="input" required autocomplete="off" name="decryption_key"/>
+																		</td>
+																		<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">
+																			<button class="button-4" role="button" type="submit">
+																				{% if item.dermato_decrypt is False %}
+																				<strong> Decrypt</strong>
+																				{% else %}
+																				<strong> Decrypted</strong>
+																				{% endif %}
+																			</button>
+																		</td>
+																	</form>
+																</tr>
+																{% else %}
+																<tr>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.project_id }}</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.mussel_glue_needed }}</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.mussel_needed }}</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.allantoin_needed }}</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">{{ item.egf_needed }}</td>
+
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">...</td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white; color:#51b4d4;"><strong>DECRYPTED</strong></td>
+																	<td style="color:rgb(0, 0, 0);text-align:center;background-color: white;">...</td>
+																</tr>
+																{% endif %}
+																{% endfor %}
+															</tbody>
+														</table>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<style>
+    .button-4 {
+  background-color: #51b4d4; /* Green background */
+  border: none;
+  color: white; /* White text */
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button-4:hover {
+  background-color: white;
+  color: #FF5722;
+  border: 2px solid #51b4d4; /* Green border on hover */
+}
+
+/* Styling the input field */
+.input {
+  padding: 8px 20px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input:focus {
+  border-color:#51b4d4;
+  outline: none;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Green glow */
+}
+
+/* Styling the "GotKey" text */
+p {
+  font-size: 16px;
+  font-weight: bold;
+  color:#51b4d4; /* Red text */
+}
+</style>
+
+	   <!-- JavaScript files -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            });
+        });
+
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+
+
+	</body>
+</html>
+
